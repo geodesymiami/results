@@ -31,7 +31,7 @@ cd rsmas_insar
 
 git clone https://github.com/insarlab/MintPy.git sources/MintPy ;
 git clone https://github.com/isce-framework/isce2.git sources/isce2
-git clone https://github.com/geodesymiami/MiNoPy.git sources/MiNoPy 
+git clone https://github.com/geodesymiami/MiNoPy.git sources/MiapPy 
 git clone https://github.com/geodesymiami/geodmod.git sources/geodmod ;
 git clone https://github.com/geodesymiami/insarmaps_scripts.git sources/insarmaps_scripts ;
 git clone https://github.com/geodesymiami/SSARA.git 3rdparty/SSARA ;
@@ -52,9 +52,10 @@ chmod 755 $miniconda_version
 mkdir -p ../3rdparty
 ./$miniconda_version -b -p ../3rdparty/miniconda3
 ../3rdparty/miniconda3/bin/conda config --add channels conda-forge
-../3rdparty/miniconda3/bin/conda install --yes --file ../sources/MintPy/docs/requirements.txt
+../3rdparty/miniconda3/bin/conda install mamba --yes
+../3rdparty/miniconda3/bin/conda install --yes --file ../sources/MintPy/requirements.txt
 ../3rdparty/miniconda3/bin/pip install git+https://github.com/insarlab/PySolid.git
-../3rdparty/miniconda3/bin/conda install --yes --file ../sources/MiNoPy/docs/requirements.txt
+../3rdparty/miniconda3/bin/conda install --yes --file ../sources/MiaplPy/docs/requirements.txt
 ../3rdparty/miniconda3/bin/conda install --yes --file ../sources/insarmaps_scripts/docs/requirements.txt
 
 ```
