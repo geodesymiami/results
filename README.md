@@ -45,20 +45,20 @@ git clone https://github.com/TACC/launcher.git 3rdparty/launcher ;
 cd setup
 rm -rf ../3rdparty/miniconda3
 #miniconda_version=Miniconda3-latest-MacOSX-x86_64.sh    # python 3.8  - does not seem to work
-miniconda_version=Miniconda3-latest-Linux-x86_64.sh
 miniconda_version=Miniconda3-py38_4.9.2-Linux-x86_64.sh
+miniconda_version=Miniconda3-latest-Linux-x86_64.sh
 wget http://repo.continuum.io/miniconda/$miniconda_version --no-check-certificate -O $miniconda_version #; if ($? != 0) exit; 
 chmod 755 $miniconda_version
 mkdir -p ../3rdparty
 ./$miniconda_version -b -p ../3rdparty/miniconda3
 ../3rdparty/miniconda3/bin/conda config --add channels conda-forge
 ../3rdparty/miniconda3/bin/conda install mamba --yes
-../3rdparty/miniconda3/bin/mamba install --yes --file ../sources/MintPy/requirements.txt
-../3rdparty/miniconda3/bin/pip install git+https://github.com/insarlab/PySolid.git
+../3rdparty/miniconda3/bin/conda install --yes --file ../sources/MintPy/requirements.txt
+#../3rdparty/miniconda3/bin/pip install git+https://github.com/insarlab/PySolid.git
 ../3rdparty/miniconda3/bin/mamba install isce2 -c conda-forge --yes 
 sed -i "s|isce2|#isce2|g" ../sources/MiaplPy/docs/requirements.txt
-../3rdparty/miniconda3/bin/mamba install --yes --file ../sources/MiaplPy/docs/requirements.txt
-../3rdparty/miniconda3/bin/mamba install --yes --file ../sources/insarmaps_scripts/docs/requirements.txt
+../3rdparty/miniconda3/bin/conda install --yes --file ../sources/MiaplPy/docs/requirements.txt
+../3rdparty/miniconda3/bin/conda install --yes --file ../sources/insarmaps_scripts/docs/requirements.txt
 
 ```
 * #Compile [MiNoPy](https://github.com/geodesymiami/MiNoPy) and install [SNAPHU](https://web.stanford.edu/group/radar/softwareandlinks/sw/snaphu/) (if required):
