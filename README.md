@@ -1,5 +1,12 @@
+https://register.gotowebinar.com/recording/4591087095752253868
+
+
 # Results
 The issues of this repository contain preliminary results of the Miami geodesy group obtained for areas that we study.
+
+
+
+
 
 ## TEST
 # Installation guide
