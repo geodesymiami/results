@@ -33,6 +33,10 @@ https://insarmaps.miami.edu/start/-6.6337/126.6655/14.8284?flyToDatasetCenter=fa
 <img width="400" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/baed6af6-0d0b-4d31-a469-5022d026a8e1">
 
 _2021-2023:_
+<img width="642" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/8bd02c3f-37b4-474a-92be-250fad220d04">
+
+_2019-2020:_
+<img width="615" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/61e39e28-261b-435f-a9bb-8534b75371a7">
 
 # Gamalama
 ### Descending:
