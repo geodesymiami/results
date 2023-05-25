@@ -24,3 +24,10 @@ https://insarmaps.miami.edu/start/-7.7850/123.6070/13.0668?flyToDatasetCenter=fa
 Data at:
 http://149.165.154.65/data/HDF5EOS/BatuTaraSenDT163
 http://149.165.154.65/data/HDF5EOS/BatuTaraSenAT
+
+# **Wetar **
+**Descending** 
+_2017-2023:_
+https://insarmaps.miami.edu/start/-6.6337/126.6655/14.8284?flyToDatasetCenter=false&startDataset=S1_IW2_017_0616_0617_20170111_20230516_S06650_S06610_E126600_E126700_Del4PSDS&pointLat=-6.63858&pointLon=126.66193&minScale=-2&maxScale=2&startDate=20170111&endDate=20230516
+<img width="1262" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/1f6d296c-3ca2-4d43-a463-5474f8ee8b13">
+_2021-2023:_
