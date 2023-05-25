@@ -46,8 +46,12 @@ miaplpy.timeseries.tempCohType       = full  # [full, average], auto for full.
 miaplpy.timeseries.minTempCoh        = 0.70     # auto for 0.5
 ```
 <img width="1180" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/6ac019ad-a598-49bf-910a-0faa454f00ee">
+```
+miaplpy.timeseries.tempCohType            = full     # [full, average], auto for full.
+miaplpyApp.cfg:miaplpy.timeseries.minTempCoh             = 0.60     # auto for 0.5
+```
 
-
+<img width="717" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/6e70f9ee-d1da-4ff7-bc2d-c3728d19b102">
 
 # Gamalama
 ### Descending:
