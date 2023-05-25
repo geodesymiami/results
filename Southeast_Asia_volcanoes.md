@@ -32,9 +32,8 @@ https://insarmaps.miami.edu/start/-6.6337/126.6655/14.8284?flyToDatasetCenter=fa
 <img width="1262" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/1f6d296c-3ca2-4d43-a463-5474f8ee8b13">
 _2021-2023:_
 
-# Ganama
-## Descending:
-
-_2017-2023_
+## Gamalama
+### Descending:
+##### 2017-2023
 https://insarmaps.miami.edu/start/0.8677/127.3981/11.0786?flyToDatasetCenter=false&startDataset=S1_IW1_090_0590_0592_20170317_20230521_N00747_N00872_E127288_E127396_Del4PSDS&pointLat=0.81027&pointLon=127.33208&minScale=-3&maxScale=3&startDate=20170317&endDate=20230521
 <img width="1228" alt="image" src="https://github.com/geodesymiami/results/assets/11162588/5ebb3331-5b5c-4a9c-b82c-4e1b5ac78fec">
