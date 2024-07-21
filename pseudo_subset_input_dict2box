@@ -43,7 +43,7 @@ def subset_input_dict2box(subset_dict, meta_dict):
           else:
              sub_x = [0, width]
 else:
-    # Here calculate sub_x, sub_y using 
+    # Here calculate sub_x, sub_y using bbox_geo2radar()
      sub_y, sub_x = coord.bbox_geo2radar()
 
     # Get subset box in y/x
