@@ -1,0 +1,57 @@
+def subset_input_dict2box(subset_dict, meta_dict):
+    """Convert subset inputs dict into box in radar and/or geo coord.
+    Parameters: subset_dict - dict, including the following 4 objects:
+                              subset_x   : list of 2 int,   subset in x direction,   default=None
+                              subset_y   : list of 2 int,   subset in y direction,   default=None
+                              subset_lat : list of 2 float, subset in lat direction, default=None
+                              subset_lon : list of 2 float, subset in lon direction, default=None
+                meta_dict   - dict, including the following items:
+                              'WIDTH'      : int
+                              'LENGTH': int
+                              'X_FIRST'    : float, optional
+                              'Y_FIRST'    : float, optional
+                              'X_STEP'     : float, optional
+                              'Y_STEP'     : float, optional
+    Returns:    pix_box     - 4-tuple of int, in pixel unit of 1, in (x0, y0, x1, y1)
+                geo_box     - 4-tuple of float, in lat/lon unit (degree)
+                              None if file is in radar coordinate.
+    Examples:
+        subset_dict = {'subset_x': None, 'subset_y': None, 'subset_lat': [30.5, 31.0], 'subset_lon': [130.0, 131.0]}
+        subset_dict = {'subset_x': [100, 1100], 'subset_y': [2050, 2550], 'subset_lat': None, 'subset_lon': None}
+        pix_box          = subset_input_dict2box(subset_dict, meta_dict)[0]
+        pix_box, geo_box = subset_input_dict2box(subset_dict, meta_dict)
+    """
+
+    # Data Coverage
+    width = int(float(meta_dict['WIDTH']))
+    length = int(float(meta_dict['LENGTH']))
+
+  if geocoded:     #  
+        # Use subset_lat/lon input if existed,  priority: lat/lon > y/x > len/wid
+          coord = ut.coordinate(meta_dict)
+          if subset_dict.get('subset_lat', None):
+              sub_y = coord.lalo2yx(subset_dict['subset_lat'], None)[0]
+          elif subset_dict['subset_y']:
+              sub_y = subset_dict['subset_y']
+          else:
+             sub_y = [0, length]
+  
+         if subset_dict.get('subset_lon', None):
+              sub_x = coord.lalo2yx(None, subset_dict['subset_lon'])[1]
+          elif subset_dict['subset_x']:
+              sub_x = subset_dict['subset_x']
+          else:
+             sub_x = [0, width]
+else:
+    # Here calculate sub_x, sub_y using 
+     sub_y, sub_x = coord.bbox_geo2radar()
+
+    # Get subset box in y/x
+    sub_x = sorted(sub_x)
+    sub_y = sorted(sub_y)
+    pix_box = (sub_x[0], sub_y[0], sub_x[1], sub_y[1])
+
+    # Get subset box in lat/lon from subset box in y/x
+    geo_box = coord.box_pixel2geo(pix_box)
+
+    return pix_box, geo_box
